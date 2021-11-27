@@ -1,0 +1,34 @@
+Git
+Github
+
+revision 
+v1 - revision - v2 - revision - v3 - accept - finalVersion 
+codeV1 - extra - v2 - extra - v3
+graphic desginer - v1 - client - v2 - client - v3 - client - v4 - client  - finalV5 -
+
+10 features in the application 
+
+
+start 
+
+git (version controlling system)
+v1 - git - client - v2 - git - client - v3 - git - client -
+git ( computer )
+github ( hub, a place for all git, wesbsite )
+
+how does it work
+----------------
+1) git is used to track something
+
+a) git i want to track this thing
+b) if you don't want to track something, you add it to gitignore file
+c) git i have updated the file 
+
+
+1) git init ===> initialise ---> git I want to start tracking the content of this folder
+2) git status ===> it will tell what is going on
+3) git add fileName/folderName/etc ===> git track this thing
+4) git log ===> it will show you all the version that you have
+5) git commit -m "what did I do/achieve" ===> we use commit to seal a version
+
+to clone a repo/project means to have acces to that repo on your computer
