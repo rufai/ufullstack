@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<body>
+    <button id='btn-a'>A</button>
+    <audio class="audio" src="./audio/mixkit-aggressive-medium-sized-dog-growling-56.wav "> </audio>
+    <button id='btn-b'>B</button>
+    <audio class="audio" src="./audio/mixkit-angry-and-agitated-dog-growling-53.wav "> </audio>
+    <button id='btn-c'>C</button>
+    <audio class="audio" src="./audio/mixkit-annoyed-big-dog-barking-51.wav "> </audio>
+    <button id='btn-d'>D</button>
+    <audio class="audio" src="./audio/mixkit-big-tired-dog-panting-52.wav "> </audio>
+    <button id='btn-e'>E</button>
+    <audio class="audio" src="./audio/mixkit-dog-barking-twice-1.wav "> </audio>
+    <button id='btn-f'>F</button>
+    <audio class="audio" src="./audio/mixkit-dog-sniffing-the-ground-49.wav "> </audio>
+    <button id='btn-g'>G</button>
+    <audio class="audio" src="./audio/mixkit-labrador-dog-playing-55.wav "> </audio>
+    <button id='btn-h'>H</button>
+    <audio class="audio" src="./audio/mixkit-little-pug-dog-heavy-breathing-57.wav "> </audio>
+    <button id='btn-i'>I</button>
+    <audio class="audio" src="./audio/mixkit-medium-size-angry-dog-bark-54.wav "> </audio>
+    <button id='btn-j'>J</button>
+    <audio class="audio" src="./audio//mixkit-defensive-big-dog-snarl-50.wav "> </audio>
+    <script>
+        // let count = 0;
+
+        let audioElement = document.getElementsByClassName('audio');
+        // console.log(audioElement)
+        let btnElementA = document.getElementById('btn-a');
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'a'){
+                audioElement[0].play();
+            }else if(e.key === 'b'){
+                audioElement[1].play();
+            }else if(e.key === 'c'){
+                audioElement[2].play();
+            }else if(e.key === 'd'){
+                audioElement[3].play();
+            }else if(e.key === 'e'){
+                audioElement[4].play();
+            }else if(e.key === 'f'){
+                audioElement[5].play();
+            }else if(e.key === 'g'){
+                audioElement[6].play();
+            }else if(e.key === 'h'){
+                audioElement[7].play();
+            }else if(e.key === 'i'){
+                audioElement[8].play();
+            }else if(e.key ==='j'){
+                audioElement[9].play();
+            }
+        });
+
+
+        let btnElementB = document.getElementById('btn-b');
+        let btnElementC = document.getElementById('btn-c');
+        let btnElementD = document.getElementById('btn-d');
+        let btnElementE = document.getElementById('btn-e');
+        let btnElementF = document.getElementById('btn-f');
+        let btnElementG = document.getElementById('btn-g');
+        let btnElementH = document.getElementById('btn-h');
+        let btnElementI = document.getElementById('btn-i');
+        let btnElementJ = document.getElementById('btn-j');
+        btnElementA.addEventListener('click', () => {
+
+            audioElement[0].play();
+        })
+        btnElementB.addEventListener('click', () => {
+            audioElement[1].play();
+
+        })
+        btnElementC.addEventListener('click', () => {
+            audioElement[2].play();
+
+        })
+        btnElementD.addEventListener('click', () => {
+            audioElement[3].play();
+
+        })
+        btnElementE.addEventListener('click', () => {
+            audioElement[4].play();
+
+        })
+        btnElementF.addEventListener('click', () => {
+            audioElement[5].play();
+
+        })
+        btnElementG.addEventListener('click', () => {
+            audioElement[6].play();
+
+        })
+        btnElementH.addEventListener('click', () => {
+            audioElement[7].play();
+
+        })
+        btnElementI.addEventListener('click', () => {
+
+            audioElement[8].play();
+        })
+        btnElementJ.addEventListener('click', () => {
+            audioElement[9].play();
+
+        })
+    </script>
+</body>
+
+</html>
