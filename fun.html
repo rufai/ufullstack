@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="one">   A  </button> <br />
+    <button id="two">   B  </button> <br />
+    <button id="three"> C  </button> <br />
+    <button id="four">  D  </button> <br />
+    <button id="five">  E  </button> <br />
+    <button id="six">   F  </button> <br />
+    <button id="seven"> G  </button> <br />
+    <button id="eight"> H  </button> <br />
+    <button id="nine">  I  </button> <br />
+    <button id="ten">   J  </button> <br />
+
+    <audio src="sounds/dog1.wav" class="dogsound" >  dog1  </audio>
+    <audio src="sounds/dog2.wav" class="dogsound" >  dog2  </audio>
+    <audio src="sounds/dog3.wav" class="dogsound" >  dog3  </audio>
+    <audio src="sounds/dog4.wav" class="dogsound" >  dog4  </audio>
+    <audio src="sounds/dog5.wav" class="dogsound" >  dog5  </audio>
+    <audio src="sounds/dog6.wav" class="dogsound" >  dog6  </audio>
+    <audio src="sounds/dog7.wav" class="dogsound" >  dog7  </audio>
+    <audio src="sounds/dog8.wav" class="dogsound" >  dog8  </audio>
+    <audio src="sounds/dog9.wav" class="dogsound" >  dog9  </audio>
+    <audio src="sounds/dog10.wav" class="dogsound" > dog10 </audio>
+
+
+
+
+</body>
+<script>
+   let buttonElement1 = document.getElementById("one")
+   let buttonElement2 = document.getElementById("two")
+   let buttonElement3 = document.getElementById("three")
+   let buttonElement4 = document.getElementById("four")
+   let buttonElement5 = document.getElementById("five")
+   let buttonElement6 = document.getElementById("six")
+   let buttonElement7 = document.getElementById("seven")
+   let buttonElement8 = document.getElementById("eight")
+   let buttonElement9 = document.getElementById("nine")
+   let buttonElement10 = document.getElementById("ten")
+    
+    
+
+   document.addEventListener( "keydown" , function(event){
+        if (event.key === "a" || event.key === "A"){
+            audioElement[0].play()
+        }
+        else if( event.key === "b" || event.key === "B"){
+            audioElement[1].play()
+        }
+        else if( event.key === "c" || event.key === "C"){
+            audioElement[2].play()
+        }
+        else if( event.key === "d" || event.key === "D"){
+            audioElement[3].play()
+        }
+        else if( event.key === "e" || event.key === "E"){
+            audioElement[4].play()
+        }
+        else if( event.key === "f" || event.key === "F"){
+            audioElement[5].play()
+        }
+        else if( event.key === "g" || event.key ==="G"){
+            audioElement[6].play()
+        }
+        else if( event.key === "h" || event.key === "H"){
+            audioElement[7].play()
+        }
+        else if( event.key === "i" || event.key === "I"){
+            audioElement[8].play()
+        }
+        else if( event.key === "j" || event.key === "J"){
+            audioElement[9].play()
+        }
+    })
+
+
+    buttonElement1.addEventListener("click", function(){
+        audioElement[0].play()
+    })
+    buttonElement2.addEventListener("click", function(){
+        audioElement[1].play()
+    } )
+    buttonElement3.addEventListener("click", function(){
+        audioElement[2].play()
+    })
+    buttonElement4.addEventListener("click", function(){
+        audioElement[3].play()
+    })
+    buttonElement5.addEventListener("click", function(){
+        audioElement[4].play()
+    })
+    buttonElement6.addEventListener("click", function(){
+        audioElement[5].play()
+    })
+    buttonElement7.addEventListener("click", function(){
+        audioElement[6].play()
+    })
+    buttonElement8.addEventListener("click", function(){
+        audioElement[7].play()
+    })
+    buttonElement9.addEventListener("click", function(){
+        audioElement[8].play()
+    })
+    buttonElement10.addEventListener("click", function(){
+        audioElement[9].play()
+    })
+
+
+    
+
+    let audioElement = document.getElementsByClassName("dogsound")
+    
+
+    function hello(){
+        for(i=1; i < 51; i++){
+            console.log(i)
+        }
+       
+    }
+</script>
+</html>
