@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Api</title>
+
+</head>
+
+<body>
+    <ul id="list">
+
+    </ul>
+    <script>
+        const listElement = document.getElementById("list")
+        const url = "https://api.thecatapi.com/v1/breeds"
+        fetch(url).then(response => {
+            console.log(response);
+            return response.json()
+        }).then(data => {
+            for (let i = 0; i < data.length ; i++) {               
+                let liElement = document.createElement("li")
+                liElement.textContent = data[i].name
+                listElement.appendChild(liElement)
+                if (data[i].image.url) {
+                    let imgElement = document.createElement("img")
+                    imgElement.src = data[i].image.url
+                    imgElement.width = 200
+                    imgElement.height = 200                    
+                    listElement.appendChild(imgElement)
+                }
+                
+
+            }
+        }).catch(err => {
+            console.log(err)
+        })
+    </script>
+</body>
+
+</html>
