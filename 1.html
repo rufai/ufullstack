@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// function getLetter(s) {
+//  let A = ['a', 'e', 'i', 'o', 'u'];
+//  let B = ['b', 'c', 'd', 'f', 'g'];
+//  let C = ['h', 'j', 'k', 'l', 'm'];
+//  let D = ['n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
+// let firstChar = s[0];
+// //     if (s[0].includes(B[i])){
+// //      return "B"
+// //  }else if (s[0].includes(A[i])){
+// //      return "A"
+// //  } else if (s[0].includes(C[i])){
+// //      return "C"
+// //  } else if (s[0].includes(D[i])){
+// //      return "D"
+// //  }
+//     switch (true) {
+//         case A.includes(firstChar) :
+//             return 'A'
+//             break;
+//         case B.includes(firstChar) :
+//             return "B"
+//             break;
+//         case C.includes(firstChar):
+//             return "C"
+//             break; 
+//         default:
+//         return "D" 
+//     }
+    
+// }    
+function vowelsAndConsonants(s) {
+    let vowels = ['a', 'e', 'i', 'o', 'u']
+    // let consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm','n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+  
+    for (let i= 0; i < s.length ; i++){
+      let char = s[i]
+      if (vowels.includes(char)){
+         console.log(char)
+      } }
+
+    for (let i= 0; i < s.length ; i++){
+      let char = s[i]
+      if (!vowels.includes(char)){
+        console.log(char)
+      }} 
+
+}
+function modifyArray(nums) {
+    const newArray = nums.map(element => 
+        element %2 === 0 ?  element * 2 : element * 3  
+      
+    )
+    return newArray
+}
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="nigerianBanks.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>States & LGAs</h1>
+            <h2>How it works?</h2>
+            <ul>
+                <li>Click on state in the drop-down</li>
+                <li> it will list the LGA's under it</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="state-dropdown">
+                <h2>Select A State</h2>
+                <select id="select-1" onchange="change()">
+                    <option>--please select a state---</option>
+                </select>
+
+            </div>
+            <div class="lga-dropdown">
+                <h3>Select LGA</h3>
+                <select id="select-2" onchange="change2()">
+                    <option>--please select lga---</option>
+                </select>
+            </div>
+            <div class="lga-list">
+                <h2 id='changeable-text'> LGAs in State</h2>
+                <ul id="list">
+
+                </ul>
+                </divclass>
+            </div>
+        </div>
+
+
+        <script>
+            let selectOne = document.getElementById("select-1")
+            let selectTwo = document.getElementById("select-2")
+
+            let changeText = document.getElementById("changeable-text")
+            let listElement = document.getElementById('list')
+                fetch("./nig.json")
+                .then(response => {
+                    console.log(response)
+                    return response.json()
+                })
+                .then(data => {
+                    console.log(data[2].state.locals[2].name)
+                    for (let i = 0; i < data.length; i++) {
+                        let optionElement = document.createElement("option")
+                        optionElement.value = data[i].state.id;
+                        optionElement.textContent = data[i].state.name;
+                        selectOne.appendChild(optionElement)
+                       
+                        
+                    }
+
+                }).catch(err => {
+                    console.log(err)
+                })
+            const change = () => {
+
+               let iD = document.getElementById("select-1").value
+               iD = iD - 1 
+               fetch("./nig.json")
+                .then(response => {
+                    console.log(response)
+                    return response.json()
+                })
+                .then(data => {
+                    selectTwo.textContent = ''
+                    listElement.textContent=""
+                    for (let n = 0; n < data[iD].state.locals.length; n++) {
+                            let secondListElement = document.createElement("option")    
+                            unorderedList = document.createElement('li')
+                            secondListElement.textContent = data[iD].state.locals[n].name;                            
+                            unorderedList.textContent = data[iD].state.locals[n].name
+                            listElement.appendChild(unorderedList)
+                            selectTwo.appendChild(secondListElement)
+                            changeText.textContent = `${data[iD].state.locals.length} LGAs in ${data[iD].state.name}`
+
+                        }
+                })
+               
+                
+
+            }
+
+            const change2 = ()=>{
+                let dropdown =  document.getElementById("select-2")
+
+           dropdown.addEventListener('click', (evt)=>{
+               console.log(evt.target.value)
+            window.open(`https://en.wikipedia.org/wiki/${evt.target.value}`) 
+           })
+            }
+           
+       
+
+        </script>
+</body>
+
+</html>

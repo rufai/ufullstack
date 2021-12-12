@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" href="animal.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <label>Select Pet</label>
+            <select id="select" onchange="change()">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="goldfish">Goldfish</option>
+                <option value="hamster">Hamster</option>
+                <option value="parrot">Parrot</option>
+                <option value="spider">Spider</option>
+            </select>
+        </div>
+
+        <img id="image" src="img/dog.jpg" width="200px" height="200px">
+    </div>
+
+
+
+
+
+
+    <script>
+        const change = () => {
+            const selectOption = document.getElementById("select").value
+            const imageElement = document.getElementById("image")
+            switch (selectOption) {
+                case "dog":
+                    imageElement.src = "./img/dog.jpg"
+                    break;
+                case "cat":
+                    imageElement.src = "./img/cat.jpg"
+                    break;
+                case "goldfish":
+                    imageElement.src = "./img/goldfish.jpg"
+                    break;
+                case "hamster":
+                    imageElement.src = "./img/hamster.jpg"
+                    break;
+                case "parrot":
+                    imageElement.src = "./img/parrot.jpg"
+                    break;
+                default:
+                    imageElement.src = "./img/spider.jpg"
+                    break;
+
+            }
+        }
+    </script>
+</body>
+
+</html>
